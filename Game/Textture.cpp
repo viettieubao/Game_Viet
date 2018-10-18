@@ -8,9 +8,6 @@ Textture::Textture(const char* filepath, D3DCOLOR transColor)
 }
 
 
-Textture::~Textture()
-{
-}
 
 void Textture::Init(const char* filepath, D3DCOLOR transColor) {
 	HRESULT result;

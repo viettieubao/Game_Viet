@@ -7,3 +7,4 @@
 
 #define WINDOW				WindowGame::getInstance()
 #define GRAPHICS			Graphic::getInstance()
+#define GAME_TIME			GameTime::GetInstance()
