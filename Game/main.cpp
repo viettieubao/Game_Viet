@@ -7,9 +7,6 @@
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPreInstance, LPSTR lpCmdLine, int nCmdShow) {
 	WINDOW->initHandleWindows(hInstance, nCmdShow);
-
-
-
 	MSG msg;
 	ZeroMemory(&msg, sizeof(msg));
 	while (msg.message != WM_QUIT) {

@@ -30,7 +30,12 @@ void WindowGame::initHandleWindows(HINSTANCE hInstance, int nCmdShow) {
 
 	HWND hWnd = CreateWindow(CLASS_NAME, "Cattle Vania", WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, hInstance, NULL);
-
+	if (!hWnd)
+	{
+		OutputDebugString("[ERROR] CreateWindow failed");
+		DWORD ErrCode = GetLastError();
+		return ;
+	}
 	ShowWindow(hWnd, nCmdShow);
 	UpdateWindow(hWnd);
 	this->hWnd = hWnd;
@@ -46,6 +51,11 @@ LRESULT WindowGame::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPara
 	}
 
 	return 0;
+}
+
+HWND WindowGame::getHandleWindow()
+{
+	return hWnd;
 }
 WindowGame::WindowGame()
 {

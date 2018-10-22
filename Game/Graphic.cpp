@@ -19,9 +19,9 @@ Graphic::~Graphic()
 Graphic* Graphic::instance = 0;
 Graphic* Graphic::getInstance()
 {
-	if (instance == 0) {
+	if (instance == 0) 
 		instance = new Graphic(WINDOW->getHandleWindow());
-	}
+	
 	return instance;
 }
 bool Graphic::isInitDirectX() {
@@ -119,7 +119,7 @@ void Graphic::BeginGraphics() {
 	HRESULT hr = d3ddv->BeginScene();
 	HRESULT hr1 = sprite->Begin(D3DXSPRITE_ALPHABLEND);
 	d3ddv->Clear(0, 0, D3DCLEAR_TARGET, D3DCOLOR_XRGB(10, 10, 10), 1.0f, 0);
-	if (!FAILED(hr) || !FAILED(hr1)) {
+	if (FAILED(hr) || FAILED(hr1)) {
 		MessageBox(hWnd, "Loi khi bat dau ve", "Error", MB_ICONERROR);
 		PostQuitMessage(0);
 	}
@@ -128,7 +128,7 @@ void Graphic::BeginGraphics() {
 void Graphic::EndGraphics() {
 	HRESULT hr = d3ddv->EndScene();
 	HRESULT hr1 = sprite->End();
-	if (!FAILED(hr) || !FAILED(hr1)) {
+	if (FAILED(hr) || FAILED(hr1)) {
 		MessageBox(hWnd, "Loi khi ket thuc", "Error", MB_ICONERROR);
 		PostQuitMessage(0);
 	}
