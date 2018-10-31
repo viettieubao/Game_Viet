@@ -122,22 +122,28 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Animation.h" />
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="GameTime.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="Graphic.h" />
+    <ClInclude Include="Map.h" />
     <ClInclude Include="RectF.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="Textture.h" />
+    <ClInclude Include="Tile.h" />
     <ClInclude Include="WindowGame.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="Camera.cpp" />
     <ClCompile Include="GameTime.cpp" />
     <ClCompile Include="Graphic.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
     <ClCompile Include="RectF.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Textture.cpp" />
+    <ClCompile Include="Tile.cpp" />
     <ClCompile Include="WindowGame.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

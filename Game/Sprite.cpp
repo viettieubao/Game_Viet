@@ -14,6 +14,17 @@ void Sprite::init(const char* imgFilePath, const char* animationInfoFilePath) {
 	for (int i = 0; i < nAnimation; i++) {
 		animations[i].init(fs);
 	}
+	image = new Textture(imgFilePath, D3DCOLOR_XRGB(r, g, b));
+}
+
+void Sprite::initAnimation(const char * animationInfoFilePath) {
+	int r, g, b;
+	fstream  fs(animationInfoFilePath);
+	fs >> r >> g >> b;
+	animations = new Animation[nAnimation];
+	for (int i = 0; i < nAnimation; i++) {
+		animations[i].init(fs);
+	}
 }
 void Sprite::draw(int x, int y, int curAnimation, int curFrame) {
 	Animation* animation = &animations[curAnimation];
